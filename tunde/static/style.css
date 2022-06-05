@@ -1,0 +1,152 @@
+:root {
+    color: red;
+    color: black;
+    color:green;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'poppins', sans-serif ;
+}
+.navbar {
+    background: var(black);
+    height: 70px;
+    padding: 0.5rem calc((100vw - 1200px) /2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar__logo {
+    color:  var(black);
+    text-decoration: none;
+     padding-left:  1rem;
+     font-size:  1.5rem;
+}
+
+.navbar__link {
+    color:  var(black);
+    text-decoration: none;
+    padding: 0rem 2rem;
+
+}
+
+.navbar__link :hover {
+    color: var(orangered);
+
+}
+
+@media screen and (max--width: 760px) {
+ .navbar__link {
+     overflow-y: hidden;
+     overflow-x: hidden;
+
+ } 
+
+ .navbar__menu {
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(4, 100px);
+position: absolute;
+width: 100%;
+top: -1000px;
+
+ }
+
+ .navbar__menu.active {
+     top: 100%;
+     opacity: 1;
+     z-index: 99;
+     height: 1000vh;
+     font-size: 1.5rem; 
+     background: var(black);
+
+ }
+
+ .navbar__toggle .bar{
+width: 25px;
+height: 3px;
+margin: 5px auto;
+transition: all 0.3s ease-in-out;
+background: var(white);
+display: block;
+cursor: pointer;
+
+
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    transform: translate(5%, 20%);
+
+}
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+
+
+}
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(0) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+}
+
+/* hero section */
+.hero  {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) ) url(./); 
+     height: 100vh;
+    background-position: center;
+    background-size: cover;
+    padding: 0.5rem calc((100vw - 1200px)/2);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.hero__content {
+    color: var(white);
+    padding: 3rem 1rem;
+    line-height:  1; 
+    
+}
+
+.hero__content hi {
+    font-size: 3rem, 8vw, 7rem;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+}
+
+.hero__content p {
+    font-size: 1rem, 4vw, 2.5rem;
+    margin-bottom: 3rem;  
+}
+
+.botton {
+    padding: 1rem, 3rem;
+    border: none;
+    background: var(rgb(214, 65, 65));
+    color: var(white);
+    font-size: 1rem;
+    cursor: pointer;
+    outline: none;
+    transition: 0.3s ease ;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.botton:hover {
+    
+    
+}
+
+/* service section */
+
+
